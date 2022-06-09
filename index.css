@@ -1,0 +1,130 @@
+.layer1 {
+    position: relative; 
+    width: 1200px; 
+    height: 405px; 
+}
+.slider {			
+	position: absolute;
+	z-index: 9;			
+	width: 580px;			
+	height: 400px;			
+	overflow: hidden;			
+	margin: 0 0 7px;			
+
+	top: 30px;
+	left: 480px;	
+}
+		
+.slider ul,		
+.slider li {			
+	padding: 0;			
+	margin: 0;			
+	list-style-type: none;		
+}		
+.slider ul {			
+	width: 9999px; 		
+}		
+.slider ul li {			
+	list-style-type: none;			
+	float: left;			
+	width: 580px;			
+	height: 295px;		
+}		
+.slider .nav {			
+	position: absolute;			
+	left: 210px;			
+	top: 345px; 		
+}		
+.slider .nav span {			
+	opacity: 0.9;			
+	background: #fff;			
+	margin: 0 20px 0 0;			
+	width: 16px;			
+	height: 16px;			
+	border-radius: 7px;			
+	cursor: pointer;			
+	overflow: hidden;			
+	display: block;			
+	float: left;			
+	box-shadow: 0 1px 2px #000;		
+}		
+.slider .nav span.on {			
+	background: #003333;		
+}
+.cont {
+	width: 1050px;			
+	height: 310px;
+	font-family: Arial;
+	font-size: 115%;
+}
+
+
+.contI 	{
+	width: 1050px;	
+	height: 180px;
+	font-family: Arial;
+	font-size: 115%;
+}
+
+.contS1 {
+	width: 290px;
+	height: 180px;
+	display: block;
+	font-family: Arial;
+	font-size: 115%;
+	float: left;
+}
+.contS2 {
+	width: 750px;
+	height: 180px;
+	display: block;
+	font-family: Arial;
+	font-size: 115%;
+	text-align: left;
+	float: right;
+}
+
+.contIt {
+	width: 1050px;	
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 150%;
+	text-align: left;
+}
+
+.contIm {
+	width: 1050px;	
+	font-family: Arial;
+	font-size: 115%;
+}
+.stran {
+	width: 1050px;	
+	font-family: Arial;
+	font-size: 115%;
+}	
+.stranleft {
+	width: 310px;	
+	font-family: Arial;
+	font-size: 115%;
+	float: left;
+	text-align: left;
+}	
+.stranright {
+	width: 730px;	
+	font-family: Arial;
+	font-size: 115%;
+	float: right;
+	text-align: left;
+}
+.stran1 {
+	width: 1050px;	
+	font-family: Arial;
+	font-size: 115%;
+	text-align: left;
+}	
+h2 {
+	color: #003333;
+}
+h3 {
+	color: #003333;
+}

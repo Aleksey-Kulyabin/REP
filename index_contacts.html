@@ -1,0 +1,112 @@
+﻿<html>
+<head>
+<title>Моделист - контакты</title>
+<link rel="stylesheet" type="text/css" href="index.css">
+<script type="text/javascript" src="js/jquery.js"></script>	
+<script type="text/javascript">		
+$(document).ready(function() {			
+$(".slider").each(function() {				
+var repeats = 1000,						
+interval = 5,						
+repeat = true, 					
+slider = $(this),						
+repeatCount = 0,						
+elements = $(slider).find("li").length;				
+$(slider)					
+.append("<div class='nav'></div>")					
+.find("li").each(function() {						
+$(slider).find(".nav").append("<span data-slide='"+$(this).index()+"'></span>");						
+$(this).attr("data-slide", $(this).index());					
+})					
+.end()					
+.find("span").first().addClass("on");
+if (repeat) {					
+repeat = setInterval(function() {						
+if (repeatCount >= repeats - 1) {							
+window.clearInterval(repeat);			
+}						
+var index = $(slider).find('.on').data("slide"),								
+nextIndex = index + 1 < elements ? index + 1 : 0;						
+sliderJS(nextIndex, slider);						
+repeatCount += 1;					
+}, interval * 1000);				
+}			
+});		
+});	
+function sliderJS(index, slider) {		
+var ul = $(slider).find("ul"),		
+bl = $(slider).find("li[data-slide=" + index + "]"),				
+step = $(bl).width();		
+$(slider)			
+.find("span").removeClass("on")			
+.end()			
+.find("span[data-slide=" + index + "]").addClass("on");		
+$(ul).animate({			
+marginLeft: "-" + step * index		
+}, 500);	
+}	
+$(document).on("click", ".slider .nav span", function(e) {
+		
+e.preventDefault();		
+var slider = $(this).closest(".slider"),				
+index = $(this).data("slide");		
+sliderJS(index, slider);
+});
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<center>
+	<div>	
+		<img src="images/index_01.png" usemap="#panel" width="1200" height="110" alt="меню"></td>
+	</div>
+	<div class="layer1">
+		<img src="images/index_02.png" width="1200" height="405" alt="шапка"></td>
+		<div class="slider">			
+			<ul>				
+				<li><a href="technique_TS-014.html"><img src="i/1.jpg" alt=""></a></li>				
+				<li><a href="aviation_LS-003.html"><img src="i/2.jpg" alt=""></a></li>				
+				<li><a href="motorcycles_14131.html"><img src="i/3.jpg" alt=""></a></li>				
+				<li><a href="cars_CS-002.html"><img src="i/4.jpg" alt=""></a></li>				
+				<li><a href="technique_05574.html"><img src="i/5.jpg" alt=""></a></li>			
+			</ul>		
+		</div>
+	</div>
+	<br>
+	<div class="cont">
+		<h1>Контакты</h1>
+		<div align="left">	
+			Электронный адрес:<br>
+			<a href="mailto:aleksey_kulyabin@mail.ru">Почта Mail.Ru</a><br>
+			Я в skype:<br>
+			<a href="skype:livealeksey.kulyabin2008?chat">Skype: livealeksey.kulyabin2008</a><br>
+			Соц. сети:<br>
+			<a href="https://vk.com/id214353902">Вконтакте</a><br>
+			<a href="https://ru-ru.facebook.com/">Facebook</a><br>
+			<a href="https://plus.google.com/u/0/118232375702950770156">Google+</a><br>
+			<a href="https://twitter.com/?lang=ru">Twitter</a><br>
+			Телефон: +7 923 003 26 16<br>
+			Адресс: 659000 Алтайский край, с. Павловск, ул. Береговая №15<br>
+		</div>
+	</div>
+	<br>
+	<div>
+		<img src="images/index_04.png" usemap="#panel1" width="1200" height="156" alt="подвал"></td>
+	</div>
+</center>
+<map name="panel">
+	<area href="index_home.html" shape="rect" coords="589,34,663,71">
+	<area href="index_models.html" shape="rect" coords="684,46,731,61">
+	<area href="index_advice.html" shape="rect" coords="765,46,808,61">
+	<area href="index_news.html" shape="rect" coords="843,46,892,61">
+	<area href="index_gallery.html" shape="rect" coords="922,46,970,61">
+	<area href="index_contacts.html" shape="rect" coords="997,46,1056,61">
+</map>
+<map name="panel1">
+	<area href="https://vk.com/id214353902" target="_blank" shape="rect" coords="12,80,90,126">
+	<area href="https://ru-ru.facebook.com/" target="_blank" shape="rect" coords="120,80,144,126">
+	<area href="https://plus.google.com/u/0/118232375702950770156" target="_blank" shape="rect" coords="171,80,216,126">
+	<area href="https://twitter.com/?lang=ru" target="_blank" shape="rect" coords="235,80,290,126">
+</map>
+</body>
+</html>
